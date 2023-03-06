@@ -1,61 +1,53 @@
 function procesar (){
   let valorPrestamo = parseInt(document.getElementById('cantidadPrestamo').value)
   let numeroCuotas = parseInt(document.getElementById('cuotas').value)
-  let bodega= document.querySelector('input[name="LineaCredito"]:checked').value;
-  cuota1 (valorPrestamo,numeroCuotas,bodega)
-  cuota2 (valorPrestamo,numeroCuotas,bodega)
-
+  let lineaCredito = document.querySelector('input[name="LineaCredito"]:checked').value;
+  let nombre =document.getElementById('nombre').value;
+  primero (valorPrestamo,numeroCuotas,lineaCredito , nombre)
 }
 
-function cuota1(valorPrestamo,numeroCuotas,bodega){
+function primero (valorPrestamo,numeroCuotas,lineaCredito, nombre){
+    alert(`Hola ${nombre} su prestamo fue aprovado`)
+  if (lineaCredito == 1) {
+    if (numeroCuotas<6 ){
+      const interes1 = 0.023
+      let valorTotal = valorPrestamo + (valorPrestamo * interes1)
+      let valorxCuota1 = valorTotal/numeroCuotas
+      alert(`el valor de cada cuota es ${valorxCuota1}`)
+      console.log(`${valorxCuota1}`)
+    }else if (numeroCuotas>12 && numeroCuotas<24 ){
+      const interes2 = 0.021
+      let valorTotal = valorPrestamo + (valorPrestamo * interes2)
+      let valorxCuota2 = valorTotal/numeroCuotas
+      alert(`el valor de cada cuota es ${valorxCuota2}`)
+      console.log(`${valorxCuota2}`)
+    }else if(numeroCuotas>24){
+    const interes3 = 0.018
+    let valorTotal = valorPrestamo + (valorPrestamo * interes3)
+    let valorxCuota3 = valorTotal/numeroCuotas
+    alert(`el valor de cada cuota es ${valorxCuota3}`)
+    console.log(`${valorxCuota3}`)
+    }
+  }else{
+    if(numeroCuotas<6){
+       const interes1 = 0.027
+        let valorTotal = valorPrestamo + (valorPrestamo * interes1)
+        let valorxCuota1 = valorTotal/numeroCuotas
+        alert(`el valor de cada cuota es ${valorxCuota1}`)
+        console.log(`${valorxCuota1}`)
+      }else if (numeroCuotas>12 && numeroCuotas<24 ){
+        const interes2 = 0.025
+        let valorTotal = valorPrestamo + (valorPrestamo * interes2)
+        let valorxCuota2 = valorTotal/numeroCuotas
+        alert(`el valor de cada cuota es ${valorxCuota2}`)
+        console.log(`${valorxCuota2}`)
+      }else if(numeroCuotas>24){
+      const interes3 = 0.021
+      let valorTotal = valorPrestamo + (valorPrestamo * interes3)
+      let valorxCuota3 = valorTotal/numeroCuotas
+      alert(`el valor de cada cuota es ${valorxCuota3}`)
+      console.log(`${valorxCuota3}`)
+      }
 
-  let interes1 = valorPrestamo * 0.025;
-  let descuentomenos6meses = interes1 * 0.02
-  let menos6meses = interes1 - descuentomenos6meses
-  let descuento12hasta24 = interes1 * 0.04
-  let menos12hasta24 = interes1 - descuento12hasta24
-  let descuentomayor24meses = interes1 * 0.07
-  let mayor24meses = interes1 - descuentomayor24meses
-  let valorTotal1 = valorPrestamo + interes1
-  let valorFinal1 = valorTotal1 - menos6meses
-  let totalCuota1 = valorFinal1/numeroCuotas
-  let valorFinal1_2 = valorTotal1 - menos12hasta24
-  let totalCuota1_2 = valorFinal1_2/numeroCuotas
-  let valorFinal1_3 = valorTotal1 - mayor24meses
-  let totalCuota1_3 = valorFinal1_3/numeroCuotas
-
-  if (numeroCuotas<6 && bodega == 1){
-    console.log(`${totalCuota1}`)
-  }else if (numeroCuotas>12 && numeroCuotas<24 && bodega == 1){
-    console.log(`${totalCuota1_2}`)
-  }else if (numeroCuotas>24 && bodega == 1){
-    console.log(`${totalCuota1_3}`)
+    }
   }
-}
-
-function cuota2(valorPrestamo,numeroCuotas,bodega){
-
-  let interes2 = valorPrestamo * 0.029;
-  let descuentomenos6meses_2 = interes2 * 0.02
-  let menos6meses_2 = interes2 - descuentomenos6meses_2
-  let descuento12hasta24_2 = interes2 * 0.04
-  let menos12hasta24_2 = interes2 - descuento12hasta24_2
-  let descuentomayor24meses_2 = interes2 * 0.07
-  let mayor24meses_2 = interes2 - descuentomayor24meses_2
-  let valorTotal2 = valorPrestamo + interes2
-  let valorFinal2 = valorTotal2 - menos6meses_2
-  let totalCuota2 = valorFinal2/numeroCuotas
-  let valorFinal2_2 = valorTotal2 - menos12hasta24_2
-  let totalCuota2_2 = valorFinal2_2/numeroCuotas
-  let valorFinal2_3 = valorTotal2 - mayor24meses_2
-  let totalCuota2_3 = valorFinal2_3/numeroCuotas
-
-  if (numeroCuotas<6 && bodega == 2){
-    console.log(`${totalCuota2}`)
-  }else if (numeroCuotas>12 && numeroCuotas<24 && bodega == 2){
-    console.log(`${totalCuota2_2}`)
-  }else if (numeroCuotas>24 && bodega == 2){
-    console.log(`${totalCuota2_3}`)
-  }
-    
-}

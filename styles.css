@@ -1,0 +1,18 @@
+.contenedor{
+  display: flex;
+    /* Establece el contenedor como un contenedor flexible */
+    flex-direction: column;
+    /* Establece la dirección de los elementos dentro del contenedor como columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    justify-content: center;
+    /* Centra los elementos verticalmente */
+    padding: 10px;
+    margin-top: 150px;
+    width: 600px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.199);
+}
+
+
