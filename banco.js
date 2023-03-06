@@ -9,9 +9,20 @@ function procesar (){
 function cuota1(valorPrestamo,numeroCuotas,bodega){
 
  const interes1 = 0.025;
+ let descuentomenos6meses = interes1 * 0.02
+ let menos6meses = interes1 - descuentomenos6meses
+ let descuento12hasta24 = interes1 * 0.04
+ let menos12hasta24 = interes1 - descuento12hasta24
+ let descuentomayor24meses = interes1 * 0.07
+ let mayor24meses = interes1 - descuentomayor24meses
  let interes =  valorPrestamo * interes1
+
  console.log(`${interes} `)
 
+ if (numeroCuotas<6 && bodega == 1){
+  numeroCuotas
+ }
+  console.log(`${descuento02} `)
 
 }
 
