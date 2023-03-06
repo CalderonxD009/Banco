@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Banco</title>
+</head>
+<body>
+
+  <div class="contenedor">
+    <img src="images/bancolombia.jpg" alt="Bancolombia">
+    <h1 class="titulo">Valor Que Desea Solicitar Prestado</h1>
+    <input type="number" id="cantidadPrestamo" placeholder="0" value="">
+
+    <hr>
+
+    <h1>Escriba El Numero De Cuotas</h1>
+    <input type="numero" id="cuotas" placeholder="#" value="">
+
+
+    <hr>
+
+    <h1>Seleccione La Linea De Credito</h1>
+
+    <form>
+      <input class="demo" id="elegLineaCredito1" type="radio" name="LineaCredito" value="1" checked/>
+      <label for="elegLineaCredito1">Linea Credito 1</label>
+
+      <br />
+
+      <input class="demo" id="elegLineaCredito2" type="radio" name="LineaCredito" value="2"  />
+      <label for="elegLineaCredito2">Linea Credito 2</label>
+    </form>
+
+    <button onclick="procesar()" style="border: 2px solid blue; border-radius: 5px;">Pedir Prestamo</button>
+  </div>
+
+</body>
+<script src="banco.js"></script>
+</html>

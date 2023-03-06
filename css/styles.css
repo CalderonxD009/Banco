@@ -1,0 +1,29 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: gray;
+}
+
+.contenedor{
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  width: 500px;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+#cantidadPrestamo{
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#cuotas{
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+button{
+  font-size: 20px;
+  margin: 10px;
+}
+
